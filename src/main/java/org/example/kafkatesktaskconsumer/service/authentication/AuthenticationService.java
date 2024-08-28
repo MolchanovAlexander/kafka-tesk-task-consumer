@@ -1,9 +1,11 @@
 package org.example.kafkatesktaskconsumer.service.authentication;
 
-
-import org.example.kafkatesktaskconsumer.model.User;
+import java.util.UUID;
 import org.example.kafkatesktaskconsumer.model.UserDto;
+import org.example.kafkatesktaskconsumer.model.UserResponseDto;
 
 public interface AuthenticationService {
-    User create(UserDto requestDto);
+    UserResponseDto create(UserDto requestDto);
+
+    UserResponseDto findById(UUID uuid);
 }
